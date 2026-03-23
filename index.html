@@ -91,11 +91,8 @@
             <!-- 页面：首页 / 创作中心首页（Studio） -->
             <div id="pageHome" class="page-view">
             <div id="studioTopContent">
-                <div class="px-5 pt-4 pb-3 bg-gray-50 flex items-center justify-between sticky top-0 z-10">
+                <div class="px-5 pt-4 pb-3 bg-gray-50 flex items-center justify-start sticky top-0 z-10">
                     <h1 class="text-xl font-bold text-gray-900 tracking-wide">Edit</h1>
-                    <button type="button" onclick="openToolboxSheet()" class="text-[12px] font-bold text-gray-700 px-3 py-1.5 rounded-full border border-gray-200 bg-white active:scale-95 transition">
-                        工具箱 <i class="fa-solid fa-sliders ml-1 text-[11px] text-gray-500"></i>
-                    </button>
                 </div>
 
                 <div class="px-5 space-y-6 mt-2">
@@ -125,6 +122,26 @@
                                 <p class="text-[11px] text-gray-400 mt-1">手动剪辑</p>
                             </button>
                         </div>
+                        <div class="grid grid-cols-3 gap-2 mt-3">
+                            <button type="button" onclick="openManualEditorFromHome()" class="bg-white rounded-2xl border border-gray-200 px-2 py-3 shadow-sm active:scale-95 transition text-center">
+                                <div class="w-8 h-8 rounded-xl bg-red-100 text-red-500 flex items-center justify-center mx-auto mb-1.5">
+                                    <i class="fa-solid fa-flag text-[13px]"></i>
+                                </div>
+                                <p class="text-[11px] font-extrabold text-gray-900 leading-tight">打点剪辑</p>
+                            </button>
+                            <button type="button" onclick="openSmartMergeFromMarkers()" class="bg-white rounded-2xl border border-gray-200 px-2 py-3 shadow-sm active:scale-95 transition text-center">
+                                <div class="w-8 h-8 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-1.5">
+                                    <i class="fa-solid fa-layer-group text-[13px]"></i>
+                                </div>
+                                <p class="text-[11px] font-extrabold text-gray-900 leading-tight">合成并导出</p>
+                            </button>
+                            <button type="button" onclick="openTemplatesAllPage()" class="bg-white rounded-2xl border border-gray-200 px-2 py-3 shadow-sm active:scale-95 transition text-center">
+                                <div class="w-8 h-8 rounded-xl bg-sky-100 text-sky-600 flex items-center justify-center mx-auto mb-1.5">
+                                    <i class="fa-solid fa-table-cells-large text-[13px]"></i>
+                                </div>
+                                <p class="text-[11px] font-extrabold text-gray-900 leading-tight">更多模板</p>
+                            </button>
+                        </div>
                     </section>
 
                     <!-- My Projects：新入口（云空间/草稿箱/已导出） -->
@@ -136,20 +153,20 @@
                             </button>
                         </div>
                         <div class="flex space-x-3 overflow-x-auto no-scrollbar -mx-1 px-1">
-                            <button type="button" onclick="openMyProjects('drafts')" class="min-w-[120px] h-[76px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 active:scale-95 transition relative">
-                                <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover opacity-90" alt="草稿">
+                            <button type="button" onclick="openMyProjects('drafts')" class="flex-none w-[96px] h-[96px] max-w-[96px] max-h-[96px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 active:scale-95 transition relative aspect-square">
+                                <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" class="absolute inset-0 w-full h-full object-cover opacity-90" alt="草稿">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                                 <span class="absolute top-2 left-2 bg-black/45 backdrop-blur text-white text-[10px] px-2 py-0.5 rounded-full font-semibold">2026/02/11</span>
                                 <span class="absolute left-2 bottom-2 text-white text-[11px] font-bold">扣篮集锦</span>
                             </button>
-                            <button type="button" onclick="openMyProjects('drafts')" class="min-w-[120px] h-[76px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 active:scale-95 transition relative">
-                                <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover opacity-90" alt="已导出">
+                            <button type="button" onclick="openMyProjects('drafts')" class="flex-none w-[96px] h-[96px] max-w-[96px] max-h-[96px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 active:scale-95 transition relative aspect-square">
+                                <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" class="absolute inset-0 w-full h-full object-cover opacity-90" alt="已导出">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                                 <span class="absolute top-2 left-2 bg-black/45 backdrop-blur text-white text-[10px] px-2 py-0.5 rounded-full font-semibold">2026/01/25</span>
                                 <span class="absolute left-2 bottom-2 text-white text-[11px] font-bold">压哨三分</span>
                             </button>
-                            <button type="button" onclick="openMyProjects('drafts')" class="min-w-[120px] h-[76px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 active:scale-95 transition relative">
-                                <img src="https://images.unsplash.com/photo-1542652735873-fb2825bac6e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" class="w-full h-full object-cover opacity-90" alt="云空间">
+                            <button type="button" onclick="openMyProjects('drafts')" class="flex-none w-[96px] h-[96px] max-w-[96px] max-h-[96px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 active:scale-95 transition relative aspect-square">
+                                <img src="https://images.unsplash.com/photo-1542652735873-fb2825bac6e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" class="absolute inset-0 w-full h-full object-cover opacity-90" alt="云空间">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                                 <span class="absolute top-2 left-2 bg-black/45 backdrop-blur text-white text-[10px] px-2 py-0.5 rounded-full font-semibold">2025/11/11</span>
                                 <span class="absolute left-2 bottom-2 text-white text-[11px] font-bold">球星复刻</span>
@@ -590,46 +607,6 @@
                 <i class="fa-solid fa-user text-lg"></i>
                 <span>我的</span>
             </button>
-        </div>
-
-        <!-- 工具箱：快捷入口面板（打点剪辑 / 合并并导出） -->
-        <div id="toolboxSheet" class="absolute inset-0 z-50 pointer-events-none">
-            <div id="toolboxSheetBackdrop" class="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-200"></div>
-            <div id="toolboxSheetPanel" class="absolute inset-x-0 bottom-0 bg-white rounded-t-3xl shadow-2xl translate-y-full transition-transform duration-250 pb-8">
-                <div class="px-5 pt-4 pb-3 flex items-center justify-between">
-                    <p class="text-[15px] font-extrabold text-gray-900">工具箱</p>
-                    <button type="button" onclick="closeToolboxSheet()" class="w-9 h-9 rounded-full bg-gray-100 text-gray-600 flex items-center justify-center active:scale-95 transition" aria-label="关闭">
-                        <i class="fa-solid fa-xmark"></i>
-                    </button>
-                </div>
-                <div class="px-5 space-y-3">
-                    <button type="button" onclick="toolboxOpenManualMarkerEdit()" class="w-full bg-white border border-gray-200 rounded-2xl px-4 py-4 flex items-center justify-between active:scale-[0.99] transition">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-xl bg-red-100 text-red-500 flex items-center justify-center">
-                                <i class="fa-solid fa-flag text-lg"></i>
-                            </div>
-                            <div class="text-left">
-                                <p class="text-[14px] font-extrabold text-gray-900">打点剪辑</p>
-                                <p class="text-[11px] text-gray-400 mt-0.5">手动标记高光并精修</p>
-                            </div>
-                        </div>
-                        <i class="fa-solid fa-angle-right text-gray-300"></i>
-                    </button>
-
-                    <button type="button" onclick="toolboxOpenMergeAndExport()" class="w-full bg-white border border-gray-200 rounded-2xl px-4 py-4 flex items-center justify-between active:scale-[0.99] transition">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-600 flex items-center justify-center">
-                                <i class="fa-solid fa-layer-group text-lg"></i>
-                            </div>
-                            <div class="text-left">
-                                <p class="text-[14px] font-extrabold text-gray-900">合并并导出</p>
-                                <p class="text-[11px] text-gray-400 mt-0.5">快速合成片段并导出成片</p>
-                            </div>
-                        </div>
-                        <i class="fa-solid fa-angle-right text-gray-300"></i>
-                    </button>
-                </div>
-            </div>
         </div>
 
         <!-- 常驻浮窗入口：FAQ（主页面层可见；全屏 modal 时隐藏） -->
@@ -1412,42 +1389,6 @@
     </div>
 
     <script>
-        /* --- 工具箱面板交互：打点剪辑 / 合并并导出 --- */
-        const toolboxSheet = document.getElementById('toolboxSheet');
-        const toolboxSheetBackdrop = document.getElementById('toolboxSheetBackdrop');
-        const toolboxSheetPanel = document.getElementById('toolboxSheetPanel');
-
-        function openToolboxSheet() {
-            if (!toolboxSheet || !toolboxSheetBackdrop || !toolboxSheetPanel) return;
-            toolboxSheet.classList.remove('pointer-events-none');
-            toolboxSheetBackdrop.classList.remove('opacity-0');
-            toolboxSheetBackdrop.classList.add('opacity-100');
-            setTimeout(() => { toolboxSheetPanel.classList.remove('translate-y-full'); }, 10);
-        }
-
-        function closeToolboxSheet() {
-            if (!toolboxSheet || !toolboxSheetBackdrop || !toolboxSheetPanel) return;
-            toolboxSheetPanel.classList.add('translate-y-full');
-            toolboxSheetBackdrop.classList.remove('opacity-100');
-            toolboxSheetBackdrop.classList.add('opacity-0');
-            setTimeout(() => { toolboxSheet.classList.add('pointer-events-none'); }, 260);
-        }
-
-        if (toolboxSheetBackdrop) {
-            toolboxSheetBackdrop.addEventListener('click', closeToolboxSheet);
-        }
-
-        function toolboxOpenManualMarkerEdit() {
-            closeToolboxSheet();
-            if (typeof openManualEditorFromHome === 'function') openManualEditorFromHome();
-        }
-
-        function toolboxOpenMergeAndExport() {
-            closeToolboxSheet();
-            // 复用现有“一键成片”的合成视图，作为合并&导出入口
-            if (typeof openSmartMergeFromMarkers === 'function') openSmartMergeFromMarkers();
-        }
-
         /* --- FAQ 常见问题：浮窗入口 + Bottom Sheet --- */
         const floatingFaqEntry = document.getElementById('floatingFaqEntry');
         const floatingFaqHideZone = document.getElementById('floatingFaqHideZone');
@@ -1630,7 +1571,6 @@
             // 主页面层可见；全屏 modal/抽屉打开时隐藏
             const anyOverlayOpen =
                 faqSheetOpen ||
-                isOverlayOpenById('toolboxSheet') ||
                 isOverlayOpenById('manualEditorModal') ||
                 isOverlayOpenById('aiAnalysisModal') ||
                 isOverlayOpenById('aigcModal');
