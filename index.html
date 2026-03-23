@@ -184,10 +184,7 @@
                             <button id="draftsBackButton" onclick="restoreStudioHome()" class="hidden text-gray-600 pb-0.5 active:opacity-50 transition -mr-2"><i class="fa-solid fa-chevron-left text-sm"></i></button>
                             <button class="text-[#FF5028] font-bold text-sm border-b-2 border-[#FF5028] pb-2 -mb-[10px] transition-colors" id="mainTabTemplate" onclick="switchMainTab('template')">精选</button>
                         </div>
-                        <!-- 新增：首页草稿箱的查看全部按钮 -->
-                        <button onclick="openTemplatesAllPage()" id="draftsViewAllBtn" class="text-[13px] text-gray-500 active:text-gray-800 transition flex items-center mb-1">
-                            查看全部 <i class="fa-solid fa-angle-right ml-1"></i>
-                        </button>
+                        
                     </div>
 
                     <!-- 模板与草稿内容区 -->
@@ -1977,7 +1974,7 @@
             draftsSec.classList.remove('mt-2');
 
             document.getElementById('draftsBackButton').classList.add('hidden');
-            document.getElementById('draftsViewAllBtn').classList.remove('hidden'); // 恢复查看全部按钮
+            
             
             document.getElementById('mainScrollContainer').scrollTop = 0;
         }
