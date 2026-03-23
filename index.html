@@ -157,6 +157,71 @@
                         </div>
                     </section>
 
+                    <!-- Recommend：优质用户作品 -->
+                    <section>
+                        <div class="flex items-center justify-between mb-2">
+                            <h2 class="text-sm font-bold text-gray-500">Recommend</h2>
+                            <button type="button" onclick="openRecommendAllPage()" class="text-[13px] text-gray-500 active:text-gray-800 transition flex items-center">
+                                <span class="mr-1">更多</span><i class="fa-solid fa-angle-right"></i>
+                            </button>
+                        </div>
+                        <div class="flex space-x-3 overflow-x-auto no-scrollbar -mx-1 px-1 pb-1">
+                            <div class="min-w-[150px] w-[150px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 active:scale-95 transition">
+                                <div class="relative w-full h-[92px] bg-gray-200">
+                                    <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover" alt="推荐作品">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                    <div class="absolute left-2 bottom-2 text-white text-[10px] flex items-center gap-2">
+                                        <span class="px-1.5 py-0.5 rounded bg-black/40 backdrop-blur">12.6万 播放</span>
+                                        <span class="px-1.5 py-0.5 rounded bg-black/40 backdrop-blur"><i class="fa-solid fa-heart mr-1 text-[9px]"></i>8.2k</span>
+                                    </div>
+                                    <div class="absolute right-2 top-2 w-7 h-7 rounded-full bg-white/25 backdrop-blur flex items-center justify-center">
+                                        <i class="fa-solid fa-play text-white text-[12px] ml-0.5"></i>
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <p class="text-[12px] font-bold text-gray-900 truncate">神级反击 · 三连快攻</p>
+                                    <p class="text-[10px] text-gray-400 mt-0.5 truncate">来自：用户精选</p>
+                                </div>
+                            </div>
+
+                            <div class="min-w-[150px] w-[150px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 active:scale-95 transition">
+                                <div class="relative w-full h-[92px] bg-gray-200">
+                                    <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover" alt="推荐作品">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                    <div class="absolute left-2 bottom-2 text-white text-[10px] flex items-center gap-2">
+                                        <span class="px-1.5 py-0.5 rounded bg-black/40 backdrop-blur">7.8万 播放</span>
+                                        <span class="px-1.5 py-0.5 rounded bg-black/40 backdrop-blur"><i class="fa-solid fa-heart mr-1 text-[9px]"></i>5.1k</span>
+                                    </div>
+                                    <div class="absolute right-2 top-2 w-7 h-7 rounded-full bg-white/25 backdrop-blur flex items-center justify-center">
+                                        <i class="fa-solid fa-play text-white text-[12px] ml-0.5"></i>
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <p class="text-[12px] font-bold text-gray-900 truncate">压哨三分 · 绝杀瞬间</p>
+                                    <p class="text-[10px] text-gray-400 mt-0.5 truncate">来自：用户精选</p>
+                                </div>
+                            </div>
+
+                            <div class="min-w-[150px] w-[150px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 active:scale-95 transition">
+                                <div class="relative w-full h-[92px] bg-gray-200">
+                                    <img src="https://images.unsplash.com/photo-1542652735873-fb2825bac6e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover" alt="推荐作品">
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                    <div class="absolute left-2 bottom-2 text-white text-[10px] flex items-center gap-2">
+                                        <span class="px-1.5 py-0.5 rounded bg-black/40 backdrop-blur">3.1万 播放</span>
+                                        <span class="px-1.5 py-0.5 rounded bg-black/40 backdrop-blur"><i class="fa-solid fa-heart mr-1 text-[9px]"></i>2.3k</span>
+                                    </div>
+                                    <div class="absolute right-2 top-2 w-7 h-7 rounded-full bg-white/25 backdrop-blur flex items-center justify-center">
+                                        <i class="fa-solid fa-play text-white text-[12px] ml-0.5"></i>
+                                    </div>
+                                </div>
+                                <div class="p-2">
+                                    <p class="text-[12px] font-bold text-gray-900 truncate">脚步教学 · 拜佛变向</p>
+                                    <p class="text-[10px] text-gray-400 mt-0.5 truncate">来自：用户精选</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                 </div>
             </div> 
 
@@ -165,7 +230,7 @@
                     <div class="flex items-end justify-between border-b border-gray-200 pb-2 mb-4 bg-gray-50 sticky top-0 z-10 pt-2" id="draftsTabContainer">
                         <div class="flex space-x-6 items-end">
                             <button id="draftsBackButton" onclick="restoreStudioHome()" class="hidden text-gray-600 pb-0.5 active:opacity-50 transition -mr-2"><i class="fa-solid fa-chevron-left text-sm"></i></button>
-                            <button class="text-[#FF5028] font-bold text-sm border-b-2 border-[#FF5028] pb-2 -mb-[10px] transition-colors" id="mainTabTemplate" onclick="switchMainTab('template')">精选</button>
+                            <button class="text-[#FF5028] font-bold text-sm border-b-2 border-[#FF5028] pb-2 -mb-[10px] transition-colors" id="mainTabTemplate" onclick="switchMainTab('template')">模板</button>
                         </div>
                         <!-- 新增：首页草稿箱的查看全部按钮 -->
                         <button onclick="openTemplatesAllPage()" id="draftsViewAllBtn" class="text-[13px] text-gray-500 active:text-gray-800 transition flex items-center mb-1">
@@ -175,36 +240,22 @@
 
                     <!-- 模板与草稿内容区 -->
                     <div id="templateContent" class="space-y-4 pb-10">
-                        <!-- 比例切换：16:9 / 9:16 / 1:1 -->
-                        <div class="flex items-center justify-between">
-                            <p class="text-[12px] font-bold text-gray-500">比例</p>
-                            <div class="flex items-center gap-2 text-[12px]">
-                                <button type="button" data-aspect="16/9" onclick="setTemplateAspect('16/9')" class="template-aspect-btn px-3 py-1.5 rounded-full bg-gray-900 text-white font-bold active:scale-95 transition">
-                                    16:9
-                                </button>
-                                <button type="button" data-aspect="9/16" onclick="setTemplateAspect('9/16')" class="template-aspect-btn px-3 py-1.5 rounded-full bg-gray-100 text-gray-600 font-bold active:scale-95 transition">
-                                    9:16
-                                </button>
-                                <button type="button" data-aspect="1/1" onclick="setTemplateAspect('1/1')" class="template-aspect-btn px-3 py-1.5 rounded-full bg-gray-100 text-gray-600 font-bold active:scale-95 transition">
-                                    1:1
-                                </button>
-                            </div>
-                        </div>
+                        <!-- 固定 1:1 展示（已移除比例切换） -->
                         <!-- 三大模板类目（原型）：进球集锦 / 高光瞬间 / 球星名场面复刻 -->
                         <div class="space-y-5">
-                            <!-- 出手的一瞬间世界凝固了 -->
+                            <!-- 进球集锦类 -->
                             <div>
                                 <div class="flex items-center justify-between mb-2">
-                                    <h3 class="text-sm font-bold text-gray-700">出手的一瞬间世界凝固了</h3>
+                                    <h3 class="text-sm font-bold text-gray-700">进球集锦类</h3>
                                     <button type="button" onclick="openTemplatesAllPage('goal')" class="text-[12px] text-gray-400 flex items-center active:text-gray-700 transition">
                                         more <i class="fa-solid fa-angle-right ml-1"></i>
                                     </button>
                                 </div>
                                 <div class="flex space-x-3 overflow-x-auto no-scrollbar -mx-1 px-1">
                                     <button type="button" onclick="openAigcTemplateFlow('goal-highlight')" class="min-w-[160px] w-[160px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 active:scale-95 transition text-left">
-                                        <div class="template-cover relative w-full bg-gray-200 js-video-preview" style="aspect-ratio: 16 / 9;" data-video-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">
-                                            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="精选">
-                                            <span class="absolute top-2 left-2 bg-white/90 text-orange-500 text-[10px] px-2 py-0.5 rounded-full font-bold">精选</span>
+                                        <div class="template-cover relative w-full bg-gray-200" style="aspect-ratio: 1 / 1;">
+                                            <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="模板">
+                                            <span class="absolute top-2 left-2 bg-white/90 text-orange-500 text-[10px] px-2 py-0.5 rounded-full font-bold">AI 模板</span>
                                         </div>
                                         <div class="p-2.5">
                                             <p class="text-[12px] font-extrabold text-gray-900 truncate">进球集锦 · 自动卡点</p>
@@ -212,9 +263,9 @@
                                         </div>
                                     </button>
                                     <button type="button" onclick="openStandardTemplateFlow('goal-recap')" class="min-w-[160px] w-[160px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 active:scale-95 transition text-left">
-                                        <div class="template-cover relative w-full bg-gray-200 js-video-preview" style="aspect-ratio: 16 / 9;" data-video-src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4">
-                                            <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="精选">
-                                            <span class="absolute top-2 left-2 bg-white/90 text-sky-600 text-[10px] px-2 py-0.5 rounded-full font-bold">精选</span>
+                                        <div class="template-cover relative w-full bg-gray-200" style="aspect-ratio: 1 / 1;">
+                                            <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="模板">
+                                            <span class="absolute top-2 left-2 bg-white/90 text-sky-600 text-[10px] px-2 py-0.5 rounded-full font-bold">模板</span>
                                         </div>
                                         <div class="p-2.5">
                                             <p class="text-[12px] font-extrabold text-gray-900 truncate">进球回顾 · 记分板</p>
@@ -234,9 +285,9 @@
                                 </div>
                                 <div class="flex space-x-3 overflow-x-auto no-scrollbar -mx-1 px-1">
                                     <button type="button" onclick="openAigcTemplateFlow('moment-slam')" class="min-w-[160px] w-[160px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 active:scale-95 transition text-left">
-                                        <div class="template-cover relative w-full bg-gray-200" style="aspect-ratio: 16 / 9;">
+                                        <div class="template-cover relative w-full bg-gray-200" style="aspect-ratio: 1 / 1;">
                                             <img src="https://images.unsplash.com/photo-1542652735873-fb2825bac6e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="模板">
-                                            <span class="absolute top-2 left-2 bg-white/90 text-orange-500 text-[10px] px-2 py-0.5 rounded-full font-bold">精选</span>
+                                            <span class="absolute top-2 left-2 bg-white/90 text-orange-500 text-[10px] px-2 py-0.5 rounded-full font-bold">AI 模板</span>
                                         </div>
                                         <div class="p-2.5">
                                             <p class="text-[12px] font-extrabold text-gray-900 truncate">高光瞬间 · 炫酷特效</p>
@@ -244,9 +295,9 @@
                                         </div>
                                     </button>
                                     <button type="button" onclick="openStandardTemplateFlow('moment-replay')" class="min-w-[160px] w-[160px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 active:scale-95 transition text-left">
-                                        <div class="template-cover relative w-full bg-gray-200" style="aspect-ratio: 16 / 9;">
+                                        <div class="template-cover relative w-full bg-gray-200" style="aspect-ratio: 1 / 1;">
                                             <img src="https://images.unsplash.com/photo-1515523110800-9415d13b84a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="模板">
-                                            <span class="absolute top-2 left-2 bg-white/90 text-sky-600 text-[10px] px-2 py-0.5 rounded-full font-bold">精选</span>
+                                            <span class="absolute top-2 left-2 bg-white/90 text-sky-600 text-[10px] px-2 py-0.5 rounded-full font-bold">模板</span>
                                         </div>
                                         <div class="p-2.5">
                                             <p class="text-[12px] font-extrabold text-gray-900 truncate">高光回放 · 慢动作</p>
@@ -266,9 +317,9 @@
                                 </div>
                                 <div class="flex space-x-3 overflow-x-auto no-scrollbar -mx-1 px-1">
                                     <button type="button" onclick="openAigcTemplateFlow('star-imitation')" class="min-w-[160px] w-[160px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 active:scale-95 transition text-left">
-                                        <div class="template-cover relative w-full bg-gray-200" style="aspect-ratio: 16 / 9;">
+                                        <div class="template-cover relative w-full bg-gray-200" style="aspect-ratio: 1 / 1;">
                                             <img src="https://images.unsplash.com/photo-1505666287802-931dc83948e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="模板">
-                                            <span class="absolute top-2 left-2 bg-white/90 text-orange-500 text-[10px] px-2 py-0.5 rounded-full font-bold">精选</span>
+                                            <span class="absolute top-2 left-2 bg-white/90 text-orange-500 text-[10px] px-2 py-0.5 rounded-full font-bold">AI 模板</span>
                                         </div>
                                         <div class="p-2.5">
                                             <p class="text-[12px] font-extrabold text-gray-900 truncate">名场面 · 镜头复刻</p>
@@ -276,9 +327,9 @@
                                         </div>
                                     </button>
                                     <button type="button" onclick="openStandardTemplateFlow('star-poster')" class="min-w-[160px] w-[160px] rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden flex-shrink-0 active:scale-95 transition text-left">
-                                        <div class="template-cover relative w-full bg-gradient-to-br from-gray-200 to-gray-100" style="aspect-ratio: 16 / 9;">
+                                        <div class="template-cover relative w-full bg-gradient-to-br from-gray-200 to-gray-100" style="aspect-ratio: 1 / 1;">
                                             <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="模板" loading="lazy">
-                                            <span class="absolute top-2 left-2 bg-white/90 text-sky-600 text-[10px] px-2 py-0.5 rounded-full font-bold">精选</span>
+                                            <span class="absolute top-2 left-2 bg-white/90 text-sky-600 text-[10px] px-2 py-0.5 rounded-full font-bold">模板</span>
                                         </div>
                                         <div class="p-2.5">
                                             <p class="text-[12px] font-extrabold text-gray-900 truncate">球星海报 · 片头片尾</p>
@@ -354,29 +405,22 @@
                     <button type="button" onclick="closeTemplatesAllPage()" class="p-2 -ml-2 text-gray-600 active:opacity-70" aria-label="返回"><i class="fa-solid fa-chevron-left text-lg"></i></button>
                     <div class="flex-1">
                         <h2 class="text-lg font-semibold text-gray-900">全部模板</h2>
-                        <p class="text-xs text-gray-400 mt-0.5">浏览所有模板，支持 16:9 / 9:16 / 1:1 预览比例。</p>
+                        <p class="text-xs text-gray-400 mt-0.5">浏览所有模板，统一 1:1 预览比例。</p>
                     </div>
                 </div>
 
-                <div class="flex items-center justify-between mb-4">
-                    <p class="text-[12px] font-bold text-gray-500">比例</p>
-                    <div class="flex items-center gap-2 text-[12px]">
-                        <button type="button" data-aspect="16/9" onclick="setTemplateAspect('16/9')" class="template-aspect-btn px-3 py-1.5 rounded-full bg-gray-900 text-white font-bold active:scale-95 transition">16:9</button>
-                        <button type="button" data-aspect="9/16" onclick="setTemplateAspect('9/16')" class="template-aspect-btn px-3 py-1.5 rounded-full bg-gray-100 text-gray-600 font-bold active:scale-95 transition">9:16</button>
-                        <button type="button" data-aspect="1/1" onclick="setTemplateAspect('1/1')" class="template-aspect-btn px-3 py-1.5 rounded-full bg-gray-100 text-gray-600 font-bold active:scale-95 transition">1:1</button>
-                    </div>
-                </div>
+                <!-- 固定 1:1 展示（已移除比例切换） -->
 
                 <div class="space-y-6 pb-10">
                     <section id="templatesAllGoal">
                         <div class="flex items-center justify-between mb-2">
-                            <h3 class="text-sm font-extrabold text-gray-900">出手的一瞬间世界凝固了</h3>
+                            <h3 class="text-sm font-extrabold text-gray-900">进球集锦类</h3>
                         </div>
                         <div class="grid grid-cols-2 gap-3">
                             <button type="button" onclick="openAigcTemplateFlow('goal-highlight')" class="rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden active:scale-[0.99] transition text-left">
-                                <div class="template-cover relative w-full bg-gray-200" style="aspect-ratio: 16 / 9;">
+                                <div class="template-cover relative w-full bg-gray-200" style="aspect-ratio: 1 / 1;">
                                     <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="模板">
-                                    <span class="absolute top-2 left-2 bg-white/90 text-orange-500 text-[10px] px-2 py-0.5 rounded-full font-bold">精选</span>
+                                    <span class="absolute top-2 left-2 bg-white/90 text-orange-500 text-[10px] px-2 py-0.5 rounded-full font-bold">AI 模板</span>
                                 </div>
                                 <div class="p-3">
                                     <p class="text-[13px] font-extrabold text-gray-900 truncate">进球集锦 · 自动卡点</p>
@@ -384,9 +428,9 @@
                                 </div>
                             </button>
                             <button type="button" onclick="openStandardTemplateFlow('goal-recap')" class="rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden active:scale-[0.99] transition text-left">
-                                <div class="template-cover relative w-full bg-gray-200" style="aspect-ratio: 16 / 9;">
+                                <div class="template-cover relative w-full bg-gray-200" style="aspect-ratio: 1 / 1;">
                                     <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="模板">
-                                    <span class="absolute top-2 left-2 bg-white/90 text-sky-600 text-[10px] px-2 py-0.5 rounded-full font-bold">精选</span>
+                                    <span class="absolute top-2 left-2 bg-white/90 text-sky-600 text-[10px] px-2 py-0.5 rounded-full font-bold">模板</span>
                                 </div>
                                 <div class="p-3">
                                     <p class="text-[13px] font-extrabold text-gray-900 truncate">进球回顾 · 记分板</p>
@@ -402,9 +446,9 @@
                         </div>
                         <div class="grid grid-cols-2 gap-3">
                             <button type="button" onclick="openAigcTemplateFlow('moment-slam')" class="rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden active:scale-[0.99] transition text-left">
-                                <div class="template-cover relative w-full bg-gray-200" style="aspect-ratio: 16 / 9;">
+                                <div class="template-cover relative w-full bg-gray-200" style="aspect-ratio: 1 / 1;">
                                     <img src="https://images.unsplash.com/photo-1542652735873-fb2825bac6e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="模板">
-                                    <span class="absolute top-2 left-2 bg-white/90 text-orange-500 text-[10px] px-2 py-0.5 rounded-full font-bold">精选</span>
+                                    <span class="absolute top-2 left-2 bg-white/90 text-orange-500 text-[10px] px-2 py-0.5 rounded-full font-bold">AI 模板</span>
                                 </div>
                                 <div class="p-3">
                                     <p class="text-[13px] font-extrabold text-gray-900 truncate">高光瞬间 · 炫酷特效</p>
@@ -412,9 +456,9 @@
                                 </div>
                             </button>
                             <button type="button" onclick="openStandardTemplateFlow('moment-replay')" class="rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden active:scale-[0.99] transition text-left">
-                                <div class="template-cover relative w-full bg-gray-200" style="aspect-ratio: 16 / 9;">
+                                <div class="template-cover relative w-full bg-gray-200" style="aspect-ratio: 1 / 1;">
                                     <img src="https://images.unsplash.com/photo-1515523110800-9415d13b84a8?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="模板">
-                                    <span class="absolute top-2 left-2 bg-white/90 text-sky-600 text-[10px] px-2 py-0.5 rounded-full font-bold">精选</span>
+                                    <span class="absolute top-2 left-2 bg-white/90 text-sky-600 text-[10px] px-2 py-0.5 rounded-full font-bold">模板</span>
                                 </div>
                                 <div class="p-3">
                                     <p class="text-[13px] font-extrabold text-gray-900 truncate">高光回放 · 慢动作</p>
@@ -430,9 +474,9 @@
                         </div>
                         <div class="grid grid-cols-2 gap-3">
                             <button type="button" onclick="openAigcTemplateFlow('star-imitation')" class="rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden active:scale-[0.99] transition text-left">
-                                <div class="template-cover relative w-full bg-gray-200" style="aspect-ratio: 16 / 9;">
+                                <div class="template-cover relative w-full bg-gray-200" style="aspect-ratio: 1 / 1;">
                                     <img src="https://images.unsplash.com/photo-1505666287802-931dc83948e9?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="模板">
-                                    <span class="absolute top-2 left-2 bg-white/90 text-orange-500 text-[10px] px-2 py-0.5 rounded-full font-bold">精选</span>
+                                    <span class="absolute top-2 left-2 bg-white/90 text-orange-500 text-[10px] px-2 py-0.5 rounded-full font-bold">AI 模板</span>
                                 </div>
                                 <div class="p-3">
                                     <p class="text-[13px] font-extrabold text-gray-900 truncate">名场面 · 镜头复刻</p>
@@ -440,9 +484,9 @@
                                 </div>
                             </button>
                             <button type="button" onclick="openStandardTemplateFlow('star-poster')" class="rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden active:scale-[0.99] transition text-left">
-                                <div class="template-cover relative w-full bg-gradient-to-br from-gray-200 to-gray-100" style="aspect-ratio: 16 / 9;">
+                                <div class="template-cover relative w-full bg-gradient-to-br from-gray-200 to-gray-100" style="aspect-ratio: 1 / 1;">
                                     <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="模板" loading="lazy">
-                                    <span class="absolute top-2 left-2 bg-white/90 text-sky-600 text-[10px] px-2 py-0.5 rounded-full font-bold">精选</span>
+                                    <span class="absolute top-2 left-2 bg-white/90 text-sky-600 text-[10px] px-2 py-0.5 rounded-full font-bold">模板</span>
                                 </div>
                                 <div class="p-3">
                                     <p class="text-[13px] font-extrabold text-gray-900 truncate">球星海报 · 片头片尾</p>
@@ -466,7 +510,7 @@
 
                 <div class="grid grid-cols-2 gap-3 pb-10">
                     <button type="button" class="rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden active:scale-[0.99] transition text-left">
-                        <div class="relative w-full bg-gray-200" style="aspect-ratio: 16 / 9;">
+                        <div class="relative w-full bg-gray-200" style="aspect-ratio: 1 / 1;">
                             <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="广告位">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                             <span class="absolute left-2 bottom-2 text-white text-[10px] font-bold">活动位 · 模板限免</span>
@@ -477,7 +521,7 @@
                         </div>
                     </button>
                     <button type="button" class="rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden active:scale-[0.99] transition text-left">
-                        <div class="relative w-full bg-gray-200" style="aspect-ratio: 16 / 9;">
+                        <div class="relative w-full bg-gray-200" style="aspect-ratio: 1 / 1;">
                             <img src="https://images.unsplash.com/photo-1519861531473-9200262188bf?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover" alt="广告位">
                             <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                             <span class="absolute left-2 bottom-2 text-white text-[10px] font-bold">品牌位 · 联名挑战</span>
@@ -1520,7 +1564,7 @@
             { id: 'newbie', label: '新手' },
             { id: 'edit', label: '剪辑' },
             { id: 'export', label: '导出' },
-            { id: 'template', label: '精选' },
+            { id: 'template', label: '模板' },
             { id: 'account', label: '账号' }
         ];
 
@@ -1535,9 +1579,9 @@
             {
                 id: 'q2',
                 category: 'template',
-                q: '模板支持哪些比例？',
-                a: '模板预览支持 16:9、9:16 和 1:1，可在模板区顶部切换比例查看效果。',
-                keywords: ['模板', '比例', '16:9', '9:16', '1:1']
+                q: '模板预览是什么比例？',
+                a: '模板预览统一为 1:1 比例，展示效果保持一致。',
+                keywords: ['模板', '比例', '1:1']
             },
             {
                 id: 'q3',
@@ -1936,23 +1980,10 @@
             if (faqSheetOpen) closeFaqSheet();
         });
 
-        /* --- 模板比例切换：16:9 / 9:16 / 1:1 --- */
-        let currentTemplateAspect = '16/9';
-
-        function setTemplateAspect(aspect) {
-            currentTemplateAspect = aspect;
-
-            document.querySelectorAll('.template-aspect-btn').forEach(btn => {
-                const btnAspect = btn.getAttribute('data-aspect') || '';
-                const active = btnAspect === aspect;
-                btn.classList.toggle('bg-gray-900', active);
-                btn.classList.toggle('text-white', active);
-                btn.classList.toggle('bg-gray-100', !active);
-                btn.classList.toggle('text-gray-600', !active);
-            });
-
+        /* --- 模板比例：固定 1:1 --- */
+        function setTemplateAspect() {
             document.querySelectorAll('.template-cover').forEach(el => {
-                el.style.aspectRatio = aspect.replace('/', ' / ');
+                el.style.aspectRatio = '1 / 1';
             });
         }
 
@@ -1964,7 +1995,7 @@
             if (page) page.classList.remove('hidden');
             document.getElementById('mainScrollContainer').scrollTop = 0;
 
-            if (typeof setTemplateAspect === 'function') setTemplateAspect(currentTemplateAspect || '16/9');
+            if (typeof setTemplateAspect === 'function') setTemplateAspect();
 
             const jump = (id) => {
                 const el = document.getElementById(id);
@@ -2165,9 +2196,9 @@
                 btn.classList.toggle('text-gray-400', !active);
             });
 
-            // 模板默认比例：16:9
+            // 模板默认比例：固定 1:1
             if (typeof setTemplateAspect === 'function') {
-                setTemplateAspect('16/9');
+                setTemplateAspect();
             }
 
             // FAQ 初始化
@@ -2799,60 +2830,6 @@
                 stepExportSuccess.classList.remove('hidden'); stepExportSuccess.classList.add('flex');
             }, 1500);
         }
-
-        (function initVideoPreviewCards() {
-            const containers = document.querySelectorAll('.js-video-preview[data-video-src]');
-            if (!containers.length) return;
-
-            const createVideo = (src) => {
-                const v = document.createElement('video');
-                v.className = 'absolute inset-0 w-full h-full object-cover';
-                v.src = src;
-                v.muted = true;
-                v.loop = true;
-                v.playsInline = true;
-                v.preload = 'metadata';
-                v.setAttribute('playsinline', '');
-                v.setAttribute('muted', '');
-                return v;
-            };
-
-            const play = async (container) => {
-                if (container.dataset.previewPlaying === '1') return;
-                const src = container.getAttribute('data-video-src');
-                if (!src) return;
-                container.dataset.previewPlaying = '1';
-
-                const video = createVideo(src);
-                container.appendChild(video);
-                try {
-                    await video.play();
-                } catch (_) {
-                    // Autoplay might be blocked on some browsers; keep poster image visible.
-                    container.dataset.previewPlaying = '0';
-                    video.remove();
-                }
-            };
-
-            const stop = (container) => {
-                if (container.dataset.previewPlaying !== '1') return;
-                container.dataset.previewPlaying = '0';
-                const video = container.querySelector('video');
-                if (video) {
-                    try { video.pause(); } catch (_) {}
-                    video.remove();
-                }
-            };
-
-            containers.forEach(container => {
-                container.style.position = container.style.position || 'relative';
-                container.addEventListener('pointerenter', () => play(container));
-                container.addEventListener('pointerleave', () => stop(container));
-                container.addEventListener('pointerdown', () => play(container));
-                container.addEventListener('pointerup', () => stop(container));
-                container.addEventListener('pointercancel', () => stop(container));
-            });
-        })();
     </script>
 </body>
 </html>
